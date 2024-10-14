@@ -13,8 +13,8 @@ export default function Footer({homepage = false}: FooterProps) {
         <div className="wrapper pt-16 lg:pt-24 flex flex-col lg:flex-row lg:justify-between relative">
             <ScrollTopButton />
             <div className='lg:w-[23rem]'>
-                <h2 className='text-2xl lg:text-[2rem] font-extrabold mb-4 lg:mb-6 text-white'>Beck's Moving</h2>
-                <p className='font-medium text-white mb-8 lg:mb-0 lg:text-lg'>Beck's Moving Company is a trusted, full-service moving provider specializing in local, long-distance, office, and commercial moves, as well as secure storage solutions.</p>
+                <h2 className='text-2xl lg:text-[2rem] font-extrabold mb-4 lg:mb-6 text-white'>Beck&apos;s Moving</h2>
+                <p className='font-medium text-white mb-8 lg:mb-0 lg:text-lg'>Beck&apos;s Moving Company is a trusted, full-service moving provider specializing in local, long-distance, office, and commercial moves, as well as secure storage solutions.</p>
             </div>
             <div className="flex flex-col lg:flex-row gap-8">
                 <div>
@@ -61,7 +61,7 @@ export default function Footer({homepage = false}: FooterProps) {
                 </div>
             </div>
         </div>
-        <p className='text-white text-xs text-center mt-8 lg:mt-20 lg:text-base'>Copyright © 2024 Beck's Moving. All rights reserved </p>
+        <p className='text-white text-xs text-center mt-8 lg:mt-20 lg:text-base'>Copyright © 2024 Beck&apos;s Moving. All rights reserved </p>
     </footer>
   )
 }

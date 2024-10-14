@@ -26,12 +26,16 @@ export default function QuoteRequestProperty({step, setStep, setProperty}: Quote
     }
 
     useEffect(() => {
-        if (other !== '') setOption('');
-    }, [other])
-
+        if (other !== '') {
+            setOption('');
+        }
+    }, [other]);
+    
     useEffect(() => {
-        if (option !== '') setOther('');
-    }, [option])
+        if (option !== '') {
+            setOther('');
+        }
+    }, [option]);
 
     return (
         <div className={`pr-11 lg:pr-16 flex flex-col justify-between lg:gap-8 min-w-[calc(100vw-2.75rem)] lg:min-w-[31rem]`}>

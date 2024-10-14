@@ -26,8 +26,10 @@ export default function QuoteRequestRooms({step, setStep, setRoom}: QuoteRequest
     }
 
     useEffect(() => {
-        if (other !== '') setOption('');
-    }, [other])
+        if (other !== '') {
+            setOption('');
+        }
+    }, [other]);
 
     return (
         <div className={`px-11 lg:px-16 flex flex-col justify-between lg:gap-8 min-w-[100vw] lg:min-w-[35rem]`}>
