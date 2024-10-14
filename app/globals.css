@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+  padding-left: .75rem;
+  padding-right: .75rem;
+
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 736px) {
+  .wrapper {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }  
+}
+
+html {
+  font-family: "Onest", sans-serif;
+  color: #444B89;
+}
+
+body {
+  background-color: #F1F1F1;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+  }
+  
+}
+
+@media (min-width: 1636px) {
+  html {
+    font-size: 14px;
+  }
+
+  input, textarea {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1900px) {
+  html {
+    font-size: 16px;
+  }
+
+  input, textarea {
+    font-size: 16px;
+  }
+}
+
+.dark-filter {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(58%) saturate(866%) hue-rotate(198deg) brightness(99%) contrast(92%);
+}
