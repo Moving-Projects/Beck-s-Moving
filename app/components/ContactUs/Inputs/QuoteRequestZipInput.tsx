@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-
 interface QuoteRequestZipInputProps {
     name: string,
     setProperty: (arg: string) => void,

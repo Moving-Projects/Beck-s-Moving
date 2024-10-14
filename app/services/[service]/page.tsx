@@ -10,8 +10,8 @@ import Footer from '@/app/components/Footer';
 import Help from '@/app/components/Services/Help';
 
 export default function Services({params}: {params: { service: string }}) {
-    let content = servicesContent.get(params.service);
-    let helpContentText = helpContent.get(params.service);
+    const content = servicesContent.get(params.service);
+    const helpContentText = helpContent.get(params.service);
     if (content === undefined || helpContentText === undefined) {
         return notFound()
     }

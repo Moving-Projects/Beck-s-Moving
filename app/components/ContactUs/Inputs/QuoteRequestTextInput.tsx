@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-
 interface QuoteRequestTextInputProps {
     name: string,
     setProperty: (arg: string) => void,

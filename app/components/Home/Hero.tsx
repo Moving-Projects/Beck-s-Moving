@@ -1,6 +1,5 @@
 import Image from "next/image";
 import QuoteForm from "../QuoteForm";
-import HeroReviewCard from "../HeroReviewCard";
 import HeroReviewCardGroup from "../HeroReviewCardGroup";
 
 export default function Hero() {

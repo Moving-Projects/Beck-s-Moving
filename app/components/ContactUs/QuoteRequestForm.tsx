@@ -31,7 +31,7 @@ export default function QuoteRequestForm({slug}: QuoteRequestFormProps) {
           if (window.innerWidth < 1024 && !mobile) setMobile(true)
           if (window.innerWidth >= 1024 && mobile) setMobile(false)
       })
-  }, [])
+  })
 
   const validateData = () => {
     if(!validateEmail(email)){
@@ -41,7 +41,7 @@ export default function QuoteRequestForm({slug}: QuoteRequestFormProps) {
         title: "Invalid Email",
         description: "The provided email is not valid",
       });
-      return;
+      return false;
     }
 
     if (movingFrom.length != 5 || movingTo.length != 5){
@@ -51,7 +51,7 @@ export default function QuoteRequestForm({slug}: QuoteRequestFormProps) {
         title: "Invalid Zip Code",
         description: "Zip code must contain 5 numbers",
       });
-      return;
+      return false;
     }
 
     if(!validatePhoneNumber(phone)){
@@ -61,8 +61,10 @@ export default function QuoteRequestForm({slug}: QuoteRequestFormProps) {
         title: "Invalid Phone Number",
         description: "The provided phone number is not valid",
       });
-      return;
+      return false;
     }
+
+    return true;
   }
 
   const submitData = async () => {
@@ -77,26 +79,26 @@ export default function QuoteRequestForm({slug}: QuoteRequestFormProps) {
       phoneNumber: phone,
     }
 
-    validateData();
+    if (!validateData()) return;
 
-    // try {
-    //   const response = await fetch('https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=a3bfdc1e-e3e6-4bb1-bcd3-b04c0129b142', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(sendData),
-    //   });
+    try {
+      const response = await fetch('https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=a3bfdc1e-e3e6-4bb1-bcd3-b04c0129b142', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(sendData),
+      });
   
-    //   if (!response.ok) {
-    //     throw new Error('Network response was not ok');
-    //   }
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
   
-    //   const data = await response.json();
-    //   console.log('Success:', data);
-    // } catch (error) {
-    //   console.error('Error:', error);
-    // }
+      const data = await response.json();
+      console.log('Success:', data);
+    } catch (error) {
+      console.error('Error:', error);
+    }
   }
 
   return (

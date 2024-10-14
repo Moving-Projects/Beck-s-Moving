@@ -1,6 +1,6 @@
 'use client'
 
-import React, { use, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import QuoteRequestStepTitle from '../QuoteRequestStepTitle'
 import QuoteRequestCheckInput from '../Inputs/QuoteRequestCheckInput'
 import QuoteRequestTextInput from '../Inputs/QuoteRequestTextInput';
@@ -15,7 +15,6 @@ interface QuoteRequestPropertyProps {
 export default function QuoteRequestProperty({step, setStep, setProperty}: QuoteRequestPropertyProps) {
     const [option, setOption] = useState('');
     const [other, setOther] = useState('');
-    const [mobile, setMobile] = useState(true);
 
     const nextStep = () => {
         setStep(step + 1);
@@ -25,10 +24,6 @@ export default function QuoteRequestProperty({step, setStep, setProperty}: Quote
     const prevStep = () => {
         setStep(step - 1);
     }
-
-    useEffect(() => {
-        window.innerWidth < 1024 ? setMobile(true) : setMobile(false);
-    }, [])
 
     useEffect(() => {
         if (other !== '') setOption('');
