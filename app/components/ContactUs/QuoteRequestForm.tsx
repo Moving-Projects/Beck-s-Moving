@@ -25,13 +25,22 @@ export default function QuoteRequestForm({slug}: QuoteRequestFormProps) {
   const { toast } = useToast()
 
   useEffect(() => {
-      window.innerWidth < 1024 ? setMobile(true) : setMobile(false);
-
-      window.addEventListener('resize', () => {
-          if (window.innerWidth < 1024 && !mobile) setMobile(true)
-          if (window.innerWidth >= 1024 && mobile) setMobile(false)
-      })
-  })
+    const handleResize = () => {
+      if (window.innerWidth < 1024 && !mobile) {
+        setMobile(true);
+      } else if (window.innerWidth >= 1024 && mobile) {
+        setMobile(false);
+      }
+    };
+  
+    handleResize(); // run once on mount
+  
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize); // cleanup on unmount
+    };
+  }, [mobile]);
 
   const validateData = () => {
     if(!validateEmail(email)){

@@ -1,6 +1,5 @@
 'use client'
 
-import React, { useState } from 'react'
 import QuoteRequestStepTitle from '../QuoteRequestStepTitle'
 import QuoteRequestTextInput from '../Inputs/QuoteRequestTextInput';
 import QuoteRequestButtons from '../QuoteRequestButtons';
