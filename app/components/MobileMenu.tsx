@@ -3,7 +3,7 @@ import ServicesNav from "./ServicesNav"
 import Icon from "./Icon"
 import Link from "next/link"
 
-export default function MobileMenu ({open}: {open: boolean}) {
+export default function MobileMenu ({open, setOpen}: {open: boolean, setOpen: (arg: boolean) => void}) {
     const variants = {
         visible: {
             height: '100vh',
@@ -38,16 +38,19 @@ export default function MobileMenu ({open}: {open: boolean}) {
                     <motion.li variants={item}>
                         <Link href="/" className="text-[2rem] font-extrabold text-white w-fit">Home</Link>
                     </motion.li>
+                    <motion.li variants={item} onClick={() => {setOpen(false)}}>
+                        <Link href="/#services" className="text-[2rem] font-extrabold text-white w-fit">Services</Link>
+                    </motion.li>
                     <motion.li variants={item}>
-                        <Link href="/" className="text-[2rem] font-extrabold text-white">About Us</Link>
+                        <Link href="/about-us" className="text-[2rem] font-extrabold text-white">About Us</Link>
+                    </motion.li>
+
+                    <motion.li variants={item} onClick={() => {setOpen(false)}}>
+                        <Link href="/#reviews" className="text-[2rem] font-extrabold text-white">Reviews</Link>
                     </motion.li>
 
                     <motion.li variants={item}>
-                        <Link href="/" className="text-[2rem] font-extrabold text-white">Client Reviews</Link>
-                    </motion.li>
-
-                    <motion.li variants={item}>
-                        <Link href="/" className="text-[2rem] font-extrabold text-white">Contact Us</Link>
+                        <Link href="/contact-us" className="text-[2rem] font-extrabold text-white">Contact Us</Link>
                     </motion.li>
                 </div>
                 

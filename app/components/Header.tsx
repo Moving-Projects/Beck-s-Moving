@@ -2,6 +2,7 @@ import Image from "next/image";
 import MobileMenu from "./MobileMenuButton";
 import ServicesNav from "./ServicesNav";
 import HeaderQuoteButton from "./HeaderQuoteButton";
+import Link from "next/link";
 
 export default function Header () {
     return (
@@ -17,11 +18,11 @@ export default function Header () {
                         />
                     </a>
                     <nav className="hidden gap-12 lg:flex">
-                        <a href="/" className="text-white text-base lg:text-lg 2xl:text-base font-extrabold min-w-4 hover:opacity-75 transition duration-200">Home</a>
-                        <a href="/#services" className="text-white text-base lg:text-lg 2xl:text-base font-extrabold min-w-4 hover:opacity-75 transition duration-200">Services</a>
-                        <a href="/about-us" className="text-white text-base lg:text-lg 2xl:text-base font-extrabold min-w-4 hover:opacity-75 transition duration-200">About Us</a>
-                        <a href="/#reviews" className="text-white text-base lg:text-lg 2xl:text-base font-extrabold min-w-4 hover:opacity-75 transition duration-200">Client Reviews</a>
-                        <a href="/contact-us" className="text-white text-base lg:text-lg 2xl:text-base font-extrabold min-w-4 hover:opacity-75 transition duration-200">Contact Us</a>
+                        <Link href="/" className="text-white text-base lg:text-lg 2xl:text-base font-extrabold min-w-4 hover:opacity-75 transition duration-200">Home</Link>
+                        <Link href="/#services" className="text-white text-base lg:text-lg 2xl:text-base font-extrabold min-w-4 hover:opacity-75 transition duration-200">Services</Link>
+                        <Link href="/about-us" className="text-white text-base lg:text-lg 2xl:text-base font-extrabold min-w-4 hover:opacity-75 transition duration-200">About Us</Link>
+                        <Link href="/#reviews" className="text-white text-base lg:text-lg 2xl:text-base font-extrabold min-w-4 hover:opacity-75 transition duration-200">Client Reviews</Link>
+                        <Link href="/contact-us" className="text-white text-base lg:text-lg 2xl:text-base font-extrabold min-w-4 hover:opacity-75 transition duration-200">Contact Us</Link>
                     </nav>
                     <div className="flex gap-3 items-center">
                         <HeaderQuoteButton />
