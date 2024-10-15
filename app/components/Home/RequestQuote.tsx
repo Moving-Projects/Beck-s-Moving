@@ -13,7 +13,7 @@ export default function RequestQuote() {
   return (
     <div className="lg:flex mt-16 max-w-full overflow-hidden">
         <div className="flex-1 bg-extraWhite"></div>
-        <motion.div ref={ref} className='pr-12 lg:pr-24 w-screen max-w-full lg:max-w-[1920px]' variants={{show: {x:0}, hide: {x:-100}}} animate={isInView ? 'show' : 'hide'} transition={{duration: .5, type: 'spring', stiffness: 50}}>
+        <motion.div ref={ref} className='pr-12 lg:pr-24 w-screen max-w-full lg:max-w-[1920px]' variants={{show: {x:0}, hide: {x:-100}}} animate={isInView ? 'show' : 'hide'} transition={{duration: .5, ease: 'easeInOut'}}>
             <div className="rounded-r-[3rem] bg-extraWhite pl-3 pr-8 lg:pr-24 lg:pl-6 pt-16 lg:pt-20 flex lg:flex-row flex-col-reverse gap-6 lg:gap-28 lg:w-full relative overflow-hidden">
                 <div className="relative lg:flex-1">
                     <Image

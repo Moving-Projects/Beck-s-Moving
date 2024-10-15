@@ -12,9 +12,9 @@ export default function Hero({title, text, img}: HeroProps) {
   return (
     <div className="rounded-b-[4rem] lg:rounded-b-[15rem] pt-6 lg:pt-16 bg-accent relative overflow-hidden mb-16 lg:mb-24">
         <div className="wrapper relative pb-48 lg:pb-56">
-            <div className='text-left relative z-10 lg:max-w-[46rem] mx-auto'>
+            <div className='text-left relative z-10 mx-auto'>
                 <h1 className="text-white text-[2rem] lg:text-8xl font-extrabold lg:leading-tight text-center">{title}</h1>
-                <p className='font-barlow font-medium text-white mt-6 mb-12 lg:mb-16 lg:text-lg text-center'>{text}</p>
+                <p className='font-barlow font-medium text-white mt-6 mb-12 lg:mb-16 lg:text-lg text-center lg:max-w-[46rem] mx-auto'>{text}</p>
                 <div className="flex justify-center">
                     <QuoteForm />
                 </div>
