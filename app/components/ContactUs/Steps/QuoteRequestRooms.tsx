@@ -18,7 +18,7 @@ export default function QuoteRequestRooms({step, setStep, setRoom}: QuoteRequest
 
     const nextStep = () => {
         setStep(step + 1);
-        other !== '' ? setRoom(other) : setRoom(option);
+        if (other !== '') setRoom(other); else setRoom(option);
     }
 
     const prevStep = () => {

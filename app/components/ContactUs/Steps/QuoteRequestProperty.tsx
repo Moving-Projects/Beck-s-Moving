@@ -18,7 +18,7 @@ export default function QuoteRequestProperty({step, setStep, setProperty}: Quote
 
     const nextStep = () => {
         setStep(step + 1);
-        other !== '' ? setProperty(other) : setProperty(option);
+        if (other !== '') setProperty(other); else setProperty(option);
     }
 
     const prevStep = () => {
