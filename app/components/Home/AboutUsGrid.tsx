@@ -18,7 +18,7 @@ export default function AboutUsGrid() {
                         src="/images/homepage/about-us/card-decoration.webp"
                         alt="about us card image"
                         className="absolute w-[36%] -top-[8%] -left-[11%]"
-                        
+                        quality={100}
                     />
                     <Image
                         width={382}
@@ -26,7 +26,7 @@ export default function AboutUsGrid() {
                         src="/images/homepage/about-us/about-us-card-1.webp"
                         alt="about us card image"
                         className="shadow-base"
-                        
+                        quality={100}
                     />
                 </div>
             </motion.div>
@@ -37,7 +37,7 @@ export default function AboutUsGrid() {
                     src="/images/homepage/about-us/about-us-card-2.webp"
                     alt="about us card image"
                     className="shadow-base lg:group-hover:translate-x-2 lg:group-hover:-translate-y-2 transition duration-300"
-                    
+                    quality={100}
                 />
             </motion.div>
             <motion.div variants={{show: {opacity: 1, y: 0}, hide: {opacity: 0, y:50}}} animate={isInView ? "show": "hide"} transition={{duration: .5, delay: .3, ease: 'easeInOut'}}>
@@ -47,7 +47,7 @@ export default function AboutUsGrid() {
                     src="/images/homepage/about-us/about-us-card-3.webp"
                     alt="about us card image"
                     className="shadow-base lg:group-hover:translate-x-2 lg:group-hover:translate-y-2 transition duration-300"
-                    
+                    quality={100}
                 />
             </motion.div>
     </div>

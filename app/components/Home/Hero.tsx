@@ -15,6 +15,7 @@ export default function Hero() {
                         src="/images/homepage/home/hero-character.webp"
                         alt="young boy holding a box for moving"
                         className="px-16 w-full lg:w-auto lg:flex-1 -mt-6 lg:-mt-[8%] object-contain object-bottom min-w-0"
+                        priority
                     />
                     <HeroReviewCardGroup />
                 </div>

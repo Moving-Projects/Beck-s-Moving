@@ -21,7 +21,7 @@ export default function ServicesGrid() {
     }
 
   return (
-    <motion.div className="grid auto-rows-fr grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8" ref={ref} variants={list} animate={isInView ? "show": "hide"} transition={{duration: .5}}>
+    <motion.div className="grid auto-rows-fr grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-4 lg:gap-8" ref={ref} variants={list} animate={isInView ? "show": "hide"} transition={{duration: .5}}>
         <ServicesCard link="/services/local-moves" title='Local Moves' text1='Moving within the city? Our local moving services are designed to handle your move efficiently and safely.' text2='How We Help: Our team of expert movers is dedicated to providing you with fast and reliable local moving services. From packing to transport, we ensure your belongings arrive at your new home in perfect condition.' image='service-1'/>
         <ServicesCard link="/services/long-distance" title='Long-Distance Moves' text1='Moving across the state or to a new city? Trust us to handle your long-distance move with care and precision.' text2='How We Help: We specialize in cross-country moves with a focus on safety and timely delivery. Our long-distance services include full packing and secure transportation, so you can move with peace of mind.' image='service-2'/>
         <ServicesCard link="/services/office-moves" title='Office Moves' text1='Minimize downtime and get back to business quickly with our professional office moving services.' text2='How We Help: We work closely with your team to create a moving plan that suits your schedule. Our movers handle everything from packing office equipment to reassembling furniture, ensuring a seamless transition.' image='service-3'/>

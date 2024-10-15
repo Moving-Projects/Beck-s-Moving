@@ -65,11 +65,12 @@ export default function ReviewCard({index, currentSlide, date, text, name, posit
         </div>
         <div className="flex gap-3 items-end">
             <Image
-                width={564}
-                height={564}
+                width={48}
+                height={48}
                 src={`/images/homepage/reviews/${img}.webp`}
                 alt="user icon"
-                className="size-14 rounded-full"
+                className="size-12 rounded-full"
+                quality={100}
             />
             <div>
                 <p className='text-dark text-2xl font-extrabold'>{name}</p>

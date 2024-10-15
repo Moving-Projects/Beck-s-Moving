@@ -34,6 +34,7 @@ export default function ServicesCard({title, text1, text2, image, link}: Service
                 src={`/images/homepage/services/${image}.webp`}
                 alt="services image"
                 className="w-full lg:w-[45%] object-contain object-bottom"
+                unoptimized
                 
             />
             <div className='flex flex-col justify-between items-start lg:gap-6'>
@@ -41,7 +42,7 @@ export default function ServicesCard({title, text1, text2, image, link}: Service
                     <p className='text-dark text-[2rem] font-extrabold hidden lg:block group-hover/card:text-white transition duration-300 mb-6'>{title}</p>
                     <p className=' group-hover/card:text-white transition duration-300 lg:text-lg'>{text1} <br/><br/> {text2}</p>
                 </div>
-                <FindMoreButton link={link} light className='-mb-14 lg:mb-0 lg:mt-0'/>
+                <FindMoreButton link={link} light className='lg:mt-0'/>
             </div>
         </div>
     </motion.div>
