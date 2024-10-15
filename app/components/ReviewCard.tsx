@@ -70,7 +70,7 @@ export default function ReviewCard({index, currentSlide, date, text, name, posit
                 src={`/images/homepage/reviews/${img}.webp`}
                 alt="user icon"
                 className="size-12 rounded-full"
-                quality={100}
+                unoptimized
             />
             <div>
                 <p className='text-dark text-2xl font-extrabold'>{name}</p>

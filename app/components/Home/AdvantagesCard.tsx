@@ -19,7 +19,7 @@ export default function AdvantagesCard({image, title1, title2, text, last}: Adva
             src={`/images/homepage/advantages/${image}.webp`}
             alt="advantages graphic"
             className="w-full rounded-3xl"
-            
+            unoptimized
         />
         <div className={`p-6 lg:p-8 bg-extraWhite rounded-3xl ${last ? 'shadow-base' : 'group-hover:translate-y-3 transition duration-300'}`}>
           <h3 className='text-dark text-2xl lg:text-[2rem] font-bold mb-4 lg:mb-6'>{title1} <br/> {title2}</h3>
