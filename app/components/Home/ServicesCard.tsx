@@ -34,7 +34,7 @@ export default function ServicesCard({title, text1, text2, image, link}: Service
                 src={`/images/homepage/services/${image}.webp`}
                 alt="services image"
                 className="w-full lg:w-[45%] object-contain object-bottom"
-                quality={100}
+                unoptimized
                 
             />
             <div className='flex flex-col justify-between items-start lg:gap-6'>
