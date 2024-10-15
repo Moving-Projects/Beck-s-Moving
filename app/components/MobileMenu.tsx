@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import ServicesNav from "./ServicesNav"
 import Icon from "./Icon"
+import Link from "next/link"
 
 export default function MobileMenu ({open}: {open: boolean}) {
     const variants = {
@@ -35,18 +36,18 @@ export default function MobileMenu ({open}: {open: boolean}) {
             <motion.ul className="flex flex-col gap-6 justify-between items-start h-[calc(100vh-8.25rem)] w-screen relative py-8 px-3" variants={list} animate={open ? "visible" : "hidden"} initial="hidden">
                 <div className="flex flex-col gap-6">
                     <motion.li variants={item}>
-                        <a href="/" className="text-[2rem] font-extrabold text-white">Home</a>
+                        <Link href="/" className="text-[2rem] font-extrabold text-white w-fit">Home</Link>
                     </motion.li>
                     <motion.li variants={item}>
-                        <a href="/" className="text-[2rem] font-extrabold text-white">About Us</a>
-                    </motion.li>
-
-                    <motion.li variants={item}>
-                        <a href="/" className="text-[2rem] font-extrabold text-white">Client Reviews</a>
+                        <Link href="/" className="text-[2rem] font-extrabold text-white">About Us</Link>
                     </motion.li>
 
                     <motion.li variants={item}>
-                        <a href="/" className="text-[2rem] font-extrabold text-white">Contact Us</a>
+                        <Link href="/" className="text-[2rem] font-extrabold text-white">Client Reviews</Link>
+                    </motion.li>
+
+                    <motion.li variants={item}>
+                        <Link href="/" className="text-[2rem] font-extrabold text-white">Contact Us</Link>
                     </motion.li>
                 </div>
                 
