@@ -75,7 +75,7 @@ export default function HeroReviewCard({absolute = false, text, name, position, 
                 height={564}
                 src={`/images/homepage/reviews/${img}.webp`}
                 alt="user icon"
-                className="size-14 rounded-full"
+                className="size-12 rounded-full"
             />
             <div>
                 <p className='text-dark text-2xl font-extrabold'>{name}</p>
