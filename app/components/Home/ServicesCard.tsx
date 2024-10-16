@@ -40,7 +40,7 @@ export default function ServicesCard({title, text1, text2, image, link}: Service
             <div className='flex flex-col justify-between items-start lg:gap-6'>
                 <div>
                     <p className='text-dark text-[2rem] font-extrabold hidden lg:block group-hover/card:text-white transition duration-300 mb-6'>{title}</p>
-                    <p className=' group-hover/card:text-white transition duration-300 lg:text-lg'>{text1} <br/><br/> {text2}</p>
+                    <p className=' group-hover/card:text-white transition duration-300 lg:text-lg font-barlow'>{text1} <br/><br/> {text2}</p>
                 </div>
                 <FindMoreButton link={link} light className='lg:mt-0'/>
             </div>
